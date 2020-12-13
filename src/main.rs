@@ -14,7 +14,7 @@ use amethyst::{
         types::DefaultBackend,
         RenderingBundle,
     },
-    ui::{RenderUi, UiBundle},
+    ui::RenderUi,
     utils::application_root_dir,
 };
 use crate::{
