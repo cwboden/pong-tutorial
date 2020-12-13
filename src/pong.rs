@@ -10,6 +10,8 @@ use amethyst::{
     ui::{Anchor, LineMode, TtfFormat, UiText, UiTransform},
 };
 
+use crate::audio::initialize_audio;
+
 pub const ARENA_HEIGHT: f32 = 100.0;
 pub const ARENA_WIDTH: f32 = 100.0;
 
@@ -27,6 +29,7 @@ impl SimpleState for Pong {
         initialize_paddles(data.world, self.sprite_sheet_handle.clone().unwrap());
         initialize_camera(data.world);
         initialize_scoreboard(data.world);
+        initialize_audio(data.world);
     }
 
     fn update(&mut self, data: &mut StateData<'_, GameData<'_, '_>>) -> SimpleTrans {
